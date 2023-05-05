@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
-      <Seo image='/images/cover.png' />
+      <Seo />
 
       <main>
         <section className='bg-slate-100'>

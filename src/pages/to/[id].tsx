@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import * as React from 'react';
 
 import { dataGuest, GustKeys } from '@/lib/data';
@@ -27,16 +26,12 @@ const getGuestName = (id: GustKeys) => {
 };
 
 export default function ToPage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const id = window?.location.pathname.replace('/to/', '');
   const guestName = getGuestName(id as GustKeys);
 
   return (
     <Layout>
-      <Seo
-        templateTitle={`Undangan Pernikahan Untuk ${guestName}`}
-        image='/images/cover.png'
-      />
+      <Seo templateTitle={`Undangan Pernikahan Untuk ${guestName}`} />
 
       <main>
         <section className='bg-slate-100'>
