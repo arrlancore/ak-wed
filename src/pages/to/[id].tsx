@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import * as React from 'react';
+import { HiArrowRight } from 'react-icons/hi';
 
 import { dataGuest, GustKeys } from '@/lib/data';
 
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
@@ -53,24 +53,26 @@ export default function ToPage({ guestName }: { guestName: string }) {
               priority
             />
             <div className='z-10'>
-              <p className='content-in mt-8 font-bold text-black'>
-                Kepada: {guestName}
-              </p>
+              <p className='content-in mt-2 font-bold'>Kepada: {guestName}</p>
+              <p className='content-in mx-auto mt-1 h-1 w-[90%] rounded-full border-b-2 border-dashed border-slate-300' />
+
               <p className='content-in font-tangerine mt-10 text-5xl'>
                 Undangan Pernikahan
               </p>
               <h4 className='content-in mt-4'>21 Mei 2023</h4>
-              <p className='content-in mt-4 text-2xl'>Arlan & Kenny</p>
+              <p className='content-in font-tangerine mt-4 text-5xl'>
+                Arlan & Kenny
+              </p>
 
-              <ArrowLink
-                className='content-in2 mt-4 md:text-lg'
+              <ButtonLink
+                className='content-in2 mt-6 px-8 pt-1 md:text-lg'
                 href='/detail'
-                variant='outline'
-                as={ButtonLink}
+                variant='dark'
                 size='sm'
+                rightIcon={HiArrowRight}
               >
-                Buka
-              </ArrowLink>
+                buka
+              </ButtonLink>
             </div>
 
             <footer className='absolute bottom-2'>
