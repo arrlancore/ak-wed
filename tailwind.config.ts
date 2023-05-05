@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['Comfortaa', ...defaultTheme.fontFamily.sans],
+        tangerine: ['Tangerine', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         primary: {
@@ -49,6 +50,9 @@ export default {
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+      },
+      backgroundImage: {
+        leave: "url('/images/leave.png')",
       },
     },
   },
