@@ -26,7 +26,10 @@ const getGuestName = (id: GustKeys) => {
 };
 
 export default function ToPage() {
-  const id = window?.location.pathname.replace('/to/', '');
+  let id = '';
+  if (window !== undefined) {
+    id = window.location.pathname.replace('/to/', '');
+  }
   const guestName = getGuestName(id as GustKeys);
 
   return (
