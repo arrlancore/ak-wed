@@ -25,13 +25,7 @@ const getGuestName = (id: GustKeys) => {
   return dataGuest[id] || dataGuest['default'];
 };
 
-export default function ToPage() {
-  let id = '';
-  if (window !== undefined) {
-    id = window.location.pathname.replace('/to/', '');
-  }
-  const guestName = getGuestName(id as GustKeys);
-
+export default function ToPage({ guestName }: { guestName: string }) {
   return (
     <Layout>
       <Seo templateTitle={`Undangan Pernikahan Untuk ${guestName}`} />
@@ -90,3 +84,9 @@ export default function ToPage() {
     </Layout>
   );
 }
+
+ToPage.getInitialProps = ({ query }: { query: Record<string, string> }) => {
+  const guestName =
+    getGuestName(query.id as GustKeys) || getGuestName('default');
+  return { guestName };
+};
