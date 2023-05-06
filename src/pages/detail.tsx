@@ -26,10 +26,12 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-cover-pattern2 bg-cover'>
+        <section className='bg-cover-pattern2 relative bg-cover'>
+          <div className='absolute left-0 top-0 h-full w-full bg-[rgba(255,255,255,0.9)]' />
+
           <div
-            className='layout relative mx-auto my-0 flex min-h-screen w-full max-w-[500px] flex-col
-           items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.9)] bg-contain bg-left-bottom bg-no-repeat py-12 text-center text-slate-600 '
+            className='layout relative mx-auto my-0 flex min-h-screen w-full max-w-[500px] flex-col items-center
+           justify-center overflow-hidden py-12 text-center text-slate-600 shadow-lg'
           >
             <Image
               src='/images/leave.png'

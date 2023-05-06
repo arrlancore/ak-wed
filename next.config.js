@@ -1,16 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/undang/default',
+        permanent: true,
+      },
+    ];
+  },
   eslint: {
     dirs: ['src'],
   },
 
   reactStrictMode: true,
   swcMinify: true,
-  exportPathMap: function () {
-    return {
-      '/': { page: '/undang/default' },
-    };
-  },
+  // output: 'export',
+  // images: { unoptimized: true },
+  // exportPathMap: function () {
+  //   return {
+  //     '/': { page: '/undang/default' },
+  //   };
+  // },
 
   // Uncoment to add domain whitelist
   // images: {
