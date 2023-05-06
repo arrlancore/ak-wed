@@ -26,10 +26,10 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-slate-100'>
+        <section className='bg-cover-pattern2 bg-cover'>
           <div
-            className='layout relative mx-auto my-0 flex min-h-screen max-w-[500px] flex-col
-           items-center justify-center overflow-hidden bg-white bg-contain bg-left-bottom bg-no-repeat py-12 text-center text-slate-600 '
+            className='layout relative mx-auto my-0 flex min-h-screen w-full max-w-[500px] flex-col
+           items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.9)] bg-contain bg-left-bottom bg-no-repeat py-12 text-center text-slate-600 '
           >
             <Image
               src='/images/leave.png'
@@ -125,9 +125,7 @@ export default function HomePage() {
                 </a>
               </Button>
 
-              <p className='font-tangerine text-primary-500 mt-4 text-5xl '>
-                Arlan & Kenny
-              </p>
+              <p className='font-tangerine mt-4 text-5xl '>Arlan & Kenny</p>
             </div>
 
             <footer className='absolute bottom-2'>

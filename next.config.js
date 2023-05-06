@@ -6,6 +6,11 @@ const nextConfig = {
 
   reactStrictMode: true,
   swcMinify: true,
+  exportPathMap: function () {
+    return {
+      '/': { page: '/undang/default' },
+    };
+  },
 
   // Uncoment to add domain whitelist
   // images: {

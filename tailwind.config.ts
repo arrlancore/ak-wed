@@ -53,6 +53,8 @@ export default {
       },
       backgroundImage: {
         leave: "url('/images/leave.png')",
+        'cover-pattern': "url('/images/cover-pattern.svg')",
+        'cover-pattern2': "url('/images/cover-pattern-2.svg')",
       },
     },
   },

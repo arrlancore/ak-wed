@@ -31,10 +31,10 @@ export default function ToPage({ guestName }: { guestName: string }) {
       <Seo templateTitle={`Undangan Pernikahan Untuk ${guestName}`} />
 
       <main>
-        <section className='bg-slate-100'>
+        <section className='bg-cover-pattern bg-cover bg-center'>
           <div
-            className='layout relative mx-auto my-0 flex min-h-screen max-w-[500px] flex-col
-           items-center justify-center overflow-hidden bg-white bg-contain bg-left-bottom bg-no-repeat py-12 text-center text-slate-600 '
+            className='layout relative mx-auto my-0 flex min-h-screen w-full max-w-[500px] flex-col
+           items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.9)] bg-contain bg-left-bottom bg-no-repeat py-12 text-center text-slate-600 '
           >
             <Image
               src='/images/leave.png'
@@ -65,9 +65,9 @@ export default function ToPage({ guestName }: { guestName: string }) {
               </p>
 
               <ButtonLink
-                className='content-in2 mt-6 px-8 pt-1 md:text-lg'
+                className='content-in2 mt-6 h-[70px] w-[70px] rounded-full bg-gray-700 pt-1 md:text-lg'
                 href='/detail'
-                variant='dark'
+                variant='primary'
                 size='sm'
                 rightIcon={HiArrowRight}
               >
