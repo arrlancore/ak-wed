@@ -1,15 +1,17 @@
 export const dataGuest = {
-  ardi: 'Mas Ardi & Keluarga',
-  eci: 'Eci & Keluarga',
+  'mas-ardi': 'Mas Ardi & Keluarga',
+  'pak-jasnal': 'Pak Jasnal & Keluarga',
   'ustad-abdul-halim': 'Ustad Abdul Halim & Keluarga',
-  tkm: 'TKM 010',
-  pembuka: 'Pemuda-Pemudi Bulaan Kamba',
   'om-joni': 'Om Joni & Keluarga',
   'om-gusnal': 'Om Gusnal & Keluarga',
+  eci: 'Eci & Keluarga',
+  tkm: 'TKM 010',
+  pembuka: 'Pemuda-Pemudi Bulaan Kamba',
   fajri: 'Fajri & Keluarga',
   andre: 'Andre & Keluarga',
   ir: 'Ir & Keluarga',
   ari: 'Ari & Keluarga',
+  dio: 'Dio & Keluarga',
   default: 'Bapak/Ibu/Saudara/i',
 } as const;
 
