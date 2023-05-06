@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import { HiBookmark } from 'react-icons/hi';
+
+import { event, WGtag } from '@/lib/ga';
 
 import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
@@ -19,7 +22,32 @@ import Seo from '@/components/Seo';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
+const storeKeyAttend = '_attend';
+
 export default function HomePage() {
+  const [attend, setAttend] = React.useState(true);
+  const { query } = useRouter();
+  const attendConfirm = () => {
+    const attend = confirm('Konfirmasi kehadiran saya?');
+    if (attend) {
+      localStorage.setItem(storeKeyAttend, (query?.guest as string) || '');
+      const w = window as WGtag;
+      event(w, {
+        action: 'ATTENDING_RSVP',
+        params: {
+          guest: query?.guest as string,
+        },
+      });
+      setAttend(true);
+      alert('Terimakasih atas konfirmasinya 🙏🙏');
+    }
+  };
+
+  React.useEffect(() => {
+    const attendStatus = localStorage.getItem(storeKeyAttend);
+    setAttend(attendStatus === query?.guest);
+  }, [query.guest]);
+
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
@@ -88,10 +116,10 @@ export default function HomePage() {
                 Insya Allah akan dilaksanakan pada:
               </p>
 
-              <div className='bg-primary-400 mx-auto mt-4 flex w-fit items-center justify-center rounded px-6 py-2 text-black'>
+              <div className='bg-primary-500 mx-auto mt-4 flex w-fit items-center justify-center rounded px-6 py-2 text-black'>
                 <p className='text-2xl font-bold text-white'>RESEPSI</p>
               </div>
-              <p className='mt-4'>Ahad, 21 Mei 2023 </p>
+              <p className='mt-2'>Ahad, 21 Mei 2023 </p>
               <p>Pukul: 10:00 - 18.00</p>
               <p>Tempat: Bulaan Kamba, Kubang Putiah,</p>
               <p>Kab. Agam, Sumtera Barat</p>
@@ -117,10 +145,19 @@ export default function HomePage() {
                 kalian berdua dalam kebaikan” - HR. Abu Dawud
               </p>
 
+              {!attend && (
+                <Button
+                  className='mt-4 w-full justify-center'
+                  onClick={attendConfirm}
+                >
+                  Konfirmasi Kehadiran
+                </Button>
+              )}
+
               <Button
                 leftIcon={HiBookmark}
                 variant='outline'
-                className='m-4 justify-center'
+                className='justify-center'
               >
                 <a href='https://goo.gl/maps/E3Lvp4pwJVv7RiV86' target='_blank'>
                   Buka Google Map

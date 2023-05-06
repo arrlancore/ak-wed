@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import { HiArrowRight } from 'react-icons/hi';
 
@@ -26,6 +27,7 @@ const getGuestName = (id: GustKeys) => {
 };
 
 export default function ToPage({ guestName }: { guestName: string }) {
+  const { query } = useRouter();
   return (
     <Layout>
       <Seo templateTitle={`Undangan Pernikahan Untuk ${guestName}`} />
@@ -67,7 +69,7 @@ export default function ToPage({ guestName }: { guestName: string }) {
 
               <ButtonLink
                 className='content-in2 mt-6 h-[72px] w-[72px] rounded-full border-gray-700 pt-1 md:h-[90px] md:w-[90px] md:text-lg'
-                href='/detail'
+                href={`/detail?guest=${query?.id}`}
                 size='sm'
                 rightIcon={HiArrowRight}
                 variant='light'

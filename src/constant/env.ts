@@ -7,3 +7,5 @@ export const showLogger = isLocal
 
 export const appDomain =
   process.env.NEXT_PUBLIC_APP_DOMAIN || 'https://arlankenny.site';
+
+export const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-1YY3QSYVMF';

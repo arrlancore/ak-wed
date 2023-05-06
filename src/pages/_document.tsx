@@ -1,5 +1,7 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
+import { gaId } from '@/constant/env';
+
 export default function Document() {
   return (
     <Html lang='en'>
@@ -18,6 +20,22 @@ export default function Document() {
         <link
           href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Tangerine&display=swap'
           rel='stylesheet'
+        />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaId}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
         />
       </Head>
       <body>
