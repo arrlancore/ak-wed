@@ -162,3 +162,17 @@
 .rotate2 {
   animation: rotation2 10s infinite ease-in-out alternate;
 }
+
+@keyframes goRight {
+  from {
+    transform: 0;
+  }
+  to {
+    translate: 4px 0;
+  }
+}
+
+.right-icon-animation {
+  animation: goRight 700ms infinite alternate;
+  animation-delay: 3s;
+}

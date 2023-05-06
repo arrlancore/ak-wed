@@ -65,11 +65,12 @@ export default function ToPage({ guestName }: { guestName: string }) {
               </p>
 
               <ButtonLink
-                className='content-in2 mt-6 h-[70px] w-[70px] rounded-full bg-gray-700 pt-1 md:text-lg'
+                className='content-in2 mt-6 h-[70px] w-[70px] rounded-full border-gray-700 pt-1 md:text-lg'
                 href='/detail'
-                variant='primary'
                 size='sm'
                 rightIcon={HiArrowRight}
+                variant='light'
+                rightIconClassName='right-icon-animation'
               >
                 buka
               </ButtonLink>
