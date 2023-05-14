@@ -26,34 +26,15 @@ export const dataGuest = {
   hadi: 'Hadi Subeno',
   zikra: 'Zikra',
   'grup-mutiijah': ' Grup Mutiijah',
+  'kak-rika': 'Kak Rika',
+  'kak-ika': 'Kak Ika (Dedek)',
+  'grup-bidadari': 'Grup Bidadari Surga',
+  'kak-opida': 'Kak Opida Nengsih',
 } as const;
 
 export type GustKeys = keyof typeof dataGuest;
 
-// const generateLink: () => {
-//   Object.keys(dataGuest).map(key => console.info(`${appDomain}/undang/${key}`))
-// }
-
-// "https://arlankenny.site/undang/nur-hidayati"
-
-// "https://arlankenny.site/undang/ukmd-azzamul-iffah"
-
-// "https://arlankenny.site/undang/elma-sintia"
-
-// "https://arlankenny.site/undang/esi"
-
-// "https://arlankenny.site/undang/anita"
-
-// "https://arlankenny.site/undang/putri"
-
-// "https://arlankenny.site/undang/asni"
-
-// "https://arlankenny.site/undang/sarwedi"
-
-// "https://arlankenny.site/undang/gilang"
-
-// "https://arlankenny.site/undang/hadi"
-
-// "https://arlankenny.site/undang/zikra"
-
-// "https://arlankenny.site/undang/grup-mutiijah"
+// https://arlankenny.site/undang/kak-rika
+// https://arlankenny.site/undang/kak-ika
+// https://arlankenny.site/undang/grup-bidadari
+// https://arlankenny.site/undang/kak-opida
