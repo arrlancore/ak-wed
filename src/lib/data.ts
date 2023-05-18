@@ -31,6 +31,7 @@ export const dataGuest = {
   'grup-bidadari': 'Grup Bidadari Surga',
   'kak-opida': 'Kak Opida Nengsih',
   selatour: 'Tim Selatour',
+  'kajian-sunnah-bkt': 'Tim KajianSunnah Bkt-Agam',
 } as const;
 
 export type GustKeys = keyof typeof dataGuest;
