@@ -30,6 +30,7 @@ export const dataGuest = {
   'kak-ika': 'Kak Ika (Dedek)',
   'grup-bidadari': 'Grup Bidadari Surga',
   'kak-opida': 'Kak Opida Nengsih',
+  selatour: 'Tim Selatour',
 } as const;
 
 export type GustKeys = keyof typeof dataGuest;
